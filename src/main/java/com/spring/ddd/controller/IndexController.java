@@ -69,9 +69,6 @@ public class IndexController {
     public Object findTid(String tid){
         DTime dTime = new DTime();
         dTime.setTime(System.currentTimeMillis());
-        Date date = new Date(System.currentTimeMillis());
-        return date;
+        return timeDao.save(dTime);
     }
-
 }
-
